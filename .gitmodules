@@ -1,6 +1,6 @@
 [submodule "Client"]
 	path = Client
-	url = C:/Program Files/Git/client
+	url = https://github.com/jennypro-gram/Next-Frontend-Template
 [submodule "Server"]
 	path = Server
-	url = C:/Program Files/Git/server
+	url = https://github.com/jennypro-gram/Flask-Backend-Template
