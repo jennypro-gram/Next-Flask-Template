@@ -55,16 +55,16 @@ def thanks() -> Message:
     })
 
 @app.get("/list", tags=[list_tag])
-def list():
+def list() -> list[Message]:
     return getList()
 
 @app.post("/addToList" ,tags=[add_tag])
-def add(body: Message): 
+def add(body: Message) -> Message: 
     message=request.json.get("message")
     newID = len(getList())
     listItem = {newID: message}
     write_json(listItem)
-    return "Item added!"
+    return jsonify({"message":"Item added!"})
     
 
 if __name__ == "__main__":
